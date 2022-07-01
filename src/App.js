@@ -24,6 +24,7 @@ import {
 } from "./pages";
 import "./App.css";
 import {useStateContext} from "./contexts/ContextProvider"
+
 const App = () => {
   const {activeMenu} = useStateContext()
   return (
@@ -60,6 +61,7 @@ const App = () => {
             </div>
           
           <div>
+            <ThemeSettings/>
             <Routes>
               {/* Dashboard */}
               <Route path="/" element={<Ecommerce />} />
