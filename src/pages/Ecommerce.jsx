@@ -11,6 +11,19 @@ const Ecommerce = () => {
   const {currentColor} = useStateContext()
   return (
     <div className="mt-12">
+      {<Helmet>
+        <title>This is home page</title>
+          <meta
+            name="description"
+            content={`Get Discounted Deals from Restaurants, Cafes, Bars, Spa, Salon, Gyms near you. Get up to 70% discount on hundreds of deals in.`}
+          />
+          <meta
+            name="keywords"
+            content="Fave, Deals, Eat, Food, Drinks, Beauty, Massage, Retail, Activities, Services, Travel, Offers, Promo, Discount"
+          />
+          <meta property="og:image"
+    content="https://uploads-ssl.webflow.com/6038903b5039a0cd15aa91d7/606be0f9f43b7bb0d59498f9_og-image.png" />
+        </Helmet>}
       <div className="flex flex-wrap lg:flex-nowrap justify-center">
         <div className="bg-white dark:text-gray-200 dark:bg-secondary-dark-bg h-44 rounded-xl w-full lg:w-80 p-8 pt-9 m-3 bg-hero-pattern bg-no-repeat bg-cover bg-center">
         <div className="flex justify-between items-center">
