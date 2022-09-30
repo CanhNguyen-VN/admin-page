@@ -3,7 +3,6 @@ import {ScheduleComponent, Day, Week, WorkWeek, Month, Agenda, Inject, Resize, D
 
 
 import { scheduleData } from '../data/dummy'
-import {Header} from "../components"
 import { Helmet } from 'react-helmet';
 const Calendar = () => {
   return (
@@ -21,7 +20,6 @@ const Calendar = () => {
           <meta property="og:image"
     content="https://cdn.shopclues.com/images1/thumbnails/104158/320/320/148648730-104158193-1592481791.jpg" />
         </Helmet>
-      <Header category="App" title="Calendar"/>
       <ScheduleComponent
       height="650px"
       eventSettings={{dataSource: scheduleData}}
