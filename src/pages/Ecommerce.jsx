@@ -5,6 +5,7 @@ import { GoPrimitiveDot} from "react-icons/go";
 import { Stacked, PieChart, Button, SparkLine } from "../components";
 import { earningData, SparklineAreaData, ecomPieChartDat } from "../data/dummy";
 import { useStateContext } from "../contexts/ContextProvider";
+import { Helmet } from 'react-helmet';
 
 const Ecommerce = () => {
   const {currentColor} = useStateContext()

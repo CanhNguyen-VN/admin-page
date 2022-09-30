@@ -29,7 +29,7 @@ const App = () => {
   const {activeMenu, themeSettings,setThemeSettings,currentColor,currentMode} = useStateContext()
   return (
     <div className={currentMode==="Dark" ? "dark":""}>
-      <Helmet>
+      {<Helmet>
         <title>This is home page</title>
           <meta
             name="description"
@@ -41,7 +41,7 @@ const App = () => {
           />
           <meta property="og:image"
     content="https://uploads-ssl.webflow.com/6038903b5039a0cd15aa91d7/606be0f9f43b7bb0d59498f9_og-image.png" />
-        </Helmet>
+        </Helmet>}
       <BrowserRouter>
         <div className="flex relative dark:bg-main-dark-bg">
           <div className="fixed right-4 bottom-4" style={{ zIndex: "1000" }}>

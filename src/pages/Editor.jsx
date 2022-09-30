@@ -3,6 +3,7 @@ import {HtmlEditor, Image,Inject,Link, QuickToolbar, RichTextEditorComponent,Too
 
 import { EditorData } from '../data/dummy'
 import {Header} from "../components"
+import { Helmet } from 'react-helmet';
 
 const Editor = () => {
   return (
