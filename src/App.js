@@ -24,11 +24,24 @@ import {
 } from "./pages";
 import "./App.css";
 import {useStateContext} from "./contexts/ContextProvider"
-
+import { Helmet } from 'react-helmet';
 const App = () => {
-  const {activeMenu} = useStateContext()
+  const {activeMenu, themeSettings,setThemeSettings,currentColor,currentMode} = useStateContext()
   return (
-    <div>
+    <div className={currentMode==="Dark" ? "dark":""}>
+      <Helmet>
+        <title>This is home page</title>
+          <meta
+            name="description"
+            content={`Get Discounted Deals from Restaurants, Cafes, Bars, Spa, Salon, Gyms near you. Get up to 70% discount on hundreds of deals in.`}
+          />
+          <meta
+            name="keywords"
+            content="Fave, Deals, Eat, Food, Drinks, Beauty, Massage, Retail, Activities, Services, Travel, Offers, Promo, Discount"
+          />
+          <meta property="og:image"
+    content="https://uploads-ssl.webflow.com/6038903b5039a0cd15aa91d7/606be0f9f43b7bb0d59498f9_og-image.png" />
+        </Helmet>
       <BrowserRouter>
         <div className="flex relative dark:bg-main-dark-bg">
           <div className="fixed right-4 bottom-4" style={{ zIndex: "1000" }}>
@@ -36,7 +49,8 @@ const App = () => {
               <button
                 type="button"
                 className="text-3xl p-3 hover:drop-shadow-xl hover:bg-light-gray text-white"
-                style={{ background: "blue", borderRadius: "50%" }}
+                style={{ background: currentColor, borderRadius: "50%" }}
+                onClick={() =>setThemeSettings(true)}
               >
                 <FiSettings />
               </button>
@@ -52,16 +66,16 @@ const App = () => {
             </div>
           )}
           <div
-            className={`dark:bg-main-bg bg-main-bg min-h-screen w-full ${
+            className={`dark:bg-main-dark-bg bg-main-bg min-h-screen w-full ${
               activeMenu ? "md:ml-72" : "flex-2"
             }`}
           >
-            <div className="fixed md:static bg-main-bg dark:bg-main-bg navbar w-full">
+            <div className="fixed md:static bg-main-bg dark:bg-main-dark-bg navbar w-full">
               <Navbar />
             </div>
           
           <div>
-            <ThemeSettings/>
+            {themeSettings&&<ThemeSettings/>}
             <Routes>
               {/* Dashboard */}
               <Route path="/" element={<Ecommerce />} />
