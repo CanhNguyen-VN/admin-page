@@ -3,6 +3,7 @@ import {GridComponent, ColumnsDirective,ColumnDirective, Page, Inject, Search, T
 
 import {employeesData, employeesGrid} from "../data/dummy"
 import { Header } from '../components'
+import { Helmet } from 'react-helmet';
 
 const Employees = () => {
   return (
