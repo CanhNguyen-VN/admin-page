@@ -12,7 +12,7 @@ const Ecommerce = () => {
   return (
     <div className="mt-12">
       {<Helmet>
-        {/* <title>This is home page</title>
+        <title>This is homie page</title>
           <meta
             name="description"
             content={`Get Discounted Deals from Restaurants, Cafes, Bars, Spa, Salon, Gyms near you. Get up to 70% discount on hundreds of deals in.`}
@@ -20,7 +20,7 @@ const Ecommerce = () => {
           <meta
             name="keywords"
             content="Fave, Deals, Eat, Food, Drinks, Beauty, Massage, Retail, Activities, Services, Travel, Offers, Promo, Discount"
-          /> */}
+          />
           <meta property="og:image"
     content="https://uploads-ssl.webflow.com/6038903b5039a0cd15aa91d7/606be0f9f43b7bb0d59498f9_og-image.png" />
         </Helmet>}
