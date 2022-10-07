@@ -6,6 +6,9 @@ const PORT = process.env.PORT || 5000
 
 const app = express();
 
+// if(process.env.NODE_ENV === 'production'){
+//     app.use(express.static("build"));
+// }
 app.get("/", (req, res) =>{
     const filePath = path.resolve(__dirname, "./build", "index.html")
     fs.readFile(filePath, "utf8", (err, data) =>{
